@@ -1,14 +1,49 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>JARVIS</title><link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JARVIS</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="app">
-<header><div class="orb">J</div><div><h1>JARVIS</h1><span>ONLINE • V1</span></div></header>
-<main><div id="messages"><div class="msg jarvis">Guten Tag. Ich bin JARVIS. Wie kann ich helfen?</div></div></main>
-<div class="quick"><button onclick="ask('Wie spät ist es?')">Uhrzeit</button><button onclick="ask('Welches Datum ist heute?')">Datum</button><button onclick="speak('JARVIS ist online.')">Test</button></div>
-<footer><input id="input" placeholder="Befehl an JARVIS..." onkeydown="if(event.key==='Enter')send()"><button onclick="send()">➤</button><button onclick="voice()">🎙</button></footer>
-</div><script src="app.js"></script>
-</body></html>
+<header>
+<div class="orb">J</div>
+<div>
+<h1>JARVIS</h1>
+<span>ONLINE • V2</span>
+</div>
+</header>
+
+<main>
+<div id="messages">
+<div class="msg jarvis">Guten Tag. Ich bin JARVIS. Ich bin online. Wie kann ich dir helfen?</div>
+</div>
+
+<div class="dashboard">
+<div><small>VERMÖGEN</small><b id="wealth">10.000,00 €</b></div>
+<div><small>DEMO-KONTO</small><b id="balance">10.000,00 €</b></div>
+<div><small>STATUS</small><b>ONLINE</b></div>
+</div>
+</main>
+
+<div class="quick">
+<button onclick="ask('Wie spät ist es?')">Uhrzeit</button>
+<button onclick="ask('Welches Datum ist heute?')">Datum</button>
+<button onclick="ask('Zeige mein Vermögen')">Vermögen</button>
+<button onclick="ask('Starte Demo Trading')">Trading</button>
+<button onclick="ask('Baue mir ein Business')">Business</button>
+<button onclick="callJarvis()">Telefon</button>
+</div>
+
+<footer>
+<input id="input" placeholder="Befehl an JARVIS..." autocomplete="off">
+<button onclick="send()">➤</button>
+<button id="mic" onclick="voice()">🎙</button>
+</footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
